@@ -1,5 +1,5 @@
 {
-  "name": "create-semver-ts-project",
+  "name": "ts-generator",
   "version": "0.1.0",
   "description": "An opinionated TypeScript project generator",
   "main": "dist/index.js",
@@ -7,23 +7,11 @@
   "author": "Chris Krycho <hello@chriskrycho.com>",
   "license": "MIT",
   "type": "module",
-  "bin": {
-    "create-semver-ts-project": "dist/bin/index.js"
-  },
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "fs-extra": "^8.1.0",
-    "walk-sync": "^2.0.2",
-    "yargs": "^14.2.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.7.1",
     "@babel/preset-typescript": "^7.6.0",
-    "@types/fs-extra": "^8.0.1",
     "@types/qunit": "^2.9.0",
-    "@types/yargs": "^13.0.3",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -36,7 +24,6 @@
     "prettier": "^1.18.2",
     "qunit": "^2.9.2",
     "rimraf": "^3.0.0",
-    "ts-node": "^8.4.1",
     "typescript": "^3.6.2"
   },
   "files": [
@@ -45,7 +32,6 @@
     "index.d.ts.map"
   ],
   "scripts": {
-    "start": "node dist/bin/index.js",
     "format": "prettier --write src 'src/**/*'",
     "lint": "eslint --fix --ext .js,.ts src",
     "build:js": "babel src --out-dir dist --extensions '.ts'",

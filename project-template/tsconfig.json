@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*"],
+  "compilerOptions": {
+
+    // We generate a "rollup" of the types into a single output file in the root
+    // directory during build, so that TS correctly looks up the types for the
+    // whole package. Here we tell `tsc` to emit to a single `outFile`...
+    "outFile": "index.js",
+  },
+  "extends": "./tsconfig.base"
+}
