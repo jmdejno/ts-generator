@@ -37,7 +37,7 @@ function initProject(argv: Arguments<InitArgv>): void {
 
   templatePackageJson.name = projectName;
 
-  IGNORE_PATHS.concat(templatePackageJson.files || []); // add `files` from package.json to exclude from copySync
+  IGNORE_PATHS.push(...(templatePackageJson.files || [])); // add `files` from package.json to exclude from copySync
   fs.ensureDir(outDir); // ensure outDir exists
 
   console.log(chalk.white('Generating files in', outDir));
